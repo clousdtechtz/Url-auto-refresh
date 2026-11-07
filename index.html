@@ -12,67 +12,71 @@
         }
 
         body {
-            background: #0d1117;
+            background: linear-gradient(135deg, #ffffff 0%, #fff5e6 25%, #ffd966 60%, #ff9f1c 100%);
+            background-attachment: fixed;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             min-height: 100vh;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             padding: 1.5rem;
-            color: #c9d1d9;
+            color: #5a3e1b;
         }
 
         .card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 16px;
-            padding: 2rem 2rem 2.2rem;
-            max-width: 680px;
+            background: linear-gradient(160deg, #ffffff 0%, #fff9f0 40%, #ffedcc 100%);
+            border: 2px solid #ffb347;
+            border-radius: 18px;
+            padding: 1.8rem 1.8rem 1.8rem;
+            max-width: 1100px;
             width: 100%;
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.7), 0 0 0 1px #2d333b inset;
+            box-shadow: 0 18px 40px rgba(255, 140, 0, 0.35), 0 0 0 4px rgba(255, 215, 0, 0.25) inset;
         }
 
+        /* Header */
         .github-badge {
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            margin-bottom: 1.8rem;
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: #e6edf3;
+            margin-bottom: 1.2rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #b45309;
             letter-spacing: -0.01em;
         }
 
         .github-badge svg {
-            fill: #f0f6fc;
-            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.5));
-            width: 28px;
-            height: 28px;
+            fill: #d97706;
+            filter: drop-shadow(0 2px 3px rgba(217, 119, 6, 0.35));
+            width: 30px;
+            height: 30px;
         }
 
         .github-badge span {
-            background: #21262d;
-            padding: 0.2rem 0.75rem;
+            background: linear-gradient(135deg, #ffb347, #ff8c00);
+            padding: 0.2rem 0.8rem;
             border-radius: 20px;
             font-size: 0.8rem;
-            font-weight: 400;
-            color: #8b949e;
-            border: 1px solid #30363d;
+            font-weight: 700;
+            color: #fff8e7;
+            border: 1px solid #ff9f1c;
             margin-left: 0.25rem;
+            box-shadow: 0 2px 6px rgba(255, 140, 0, 0.4);
         }
 
+        /* Input row */
         .input-group {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
 
         .input-group label {
             font-size: 0.85rem;
-            font-weight: 500;
-            color: #8b949e;
-            letter-spacing: 0.3px;
+            font-weight: 700;
+            color: #b45309;
+            letter-spacing: 0.4px;
             text-transform: uppercase;
             display: flex;
             align-items: center;
@@ -80,23 +84,24 @@
         }
 
         .input-group label svg {
-            fill: #8b949e;
+            fill: #d97706;
             width: 14px;
             height: 14px;
         }
 
         .url-input-wrapper {
             display: flex;
-            background: #0d1117;
-            border: 1px solid #30363d;
-            border-radius: 10px;
+            background: #ffffff;
+            border: 2px solid #ffb347;
+            border-radius: 12px;
             transition: border-color 0.2s, box-shadow 0.2s;
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(255, 165, 0, 0.15);
         }
 
         .url-input-wrapper:focus-within {
-            border-color: #388bfd;
-            box-shadow: 0 0 0 3px rgba(56, 139, 253, 0.25);
+            border-color: #ff8c00;
+            box-shadow: 0 0 0 4px rgba(255, 165, 0, 0.25);
         }
 
         .url-input-wrapper input {
@@ -104,42 +109,41 @@
             background: transparent;
             border: none;
             padding: 0.9rem 1rem;
-            font-size: 1rem;
-            color: #e6edf3;
+            font-size: 0.95rem;
+            color: #5a3e1b;
             outline: none;
             font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
-            font-size: 0.95rem;
             letter-spacing: -0.2px;
         }
 
         .url-input-wrapper input::placeholder {
-            color: #484f58;
+            color: #d1b48a;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             font-size: 0.95rem;
         }
 
         .url-input-wrapper button {
-            background: #238636;
+            background: linear-gradient(135deg, #ffb347, #ff8c00);
             border: none;
-            color: white;
-            font-weight: 600;
+            color: #ffffff;
+            font-weight: 700;
             font-size: 0.9rem;
-            padding: 0 1.5rem;
+            padding: 0 1.6rem;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 0.4rem;
-            transition: background 0.2s;
-            border-left: 1px solid #2ea043;
+            gap: 0.45rem;
+            transition: background 0.2s, transform 0.1s;
+            border-left: 2px solid #ff9f1c;
             white-space: nowrap;
         }
 
         .url-input-wrapper button:hover {
-            background: #2ea043;
+            background: linear-gradient(135deg, #ffa733, #ff7a00);
         }
 
         .url-input-wrapper button:active {
-            background: #238636;
+            transform: scale(0.98);
         }
 
         .url-input-wrapper button svg {
@@ -148,103 +152,90 @@
             height: 16px;
         }
 
+        /* Status panel */
         .status-panel {
-            background: #0d1117;
-            border: 1px solid #30363d;
+            background: linear-gradient(135deg, #fff9f0, #ffedcc);
+            border: 2px solid #ffb347;
             border-radius: 12px;
-            padding: 1rem 1.2rem;
+            padding: 0.8rem 1.1rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1.8rem;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(255, 165, 0, 0.12);
         }
 
         .status-left {
             display: flex;
             align-items: center;
             gap: 0.75rem;
+            flex-wrap: wrap;
         }
 
         .pulse-dot {
             width: 12px;
             height: 12px;
-            background: #3fb950;
+            background: #22c55e;
             border-radius: 50%;
-            box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.7);
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
             animation: pulse 1.4s infinite;
             flex-shrink: 0;
         }
 
         .pulse-dot.idle {
-            background: #484f58;
+            background: #d1b48a;
             box-shadow: none;
             animation: none;
         }
 
         @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 8px rgba(63, 185, 80, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(63, 185, 80, 0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
         }
 
         .status-text {
             font-size: 0.9rem;
-            color: #c9d1d9;
+            color: #5a3e1b;
         }
 
         .status-text strong {
-            color: #e6edf3;
-            font-weight: 600;
-        }
-
-        .status-text .countdown {
-            background: #21262d;
-            padding: 0.15rem 0.6rem;
-            border-radius: 16px;
-            font-family: 'SF Mono', monospace;
-            font-size: 0.85rem;
-            color: #e6edf3;
-            border: 1px solid #30363d;
-            margin-left: 0.4rem;
+            color: #b45309;
+            font-weight: 700;
         }
 
         .toggle-btn {
-            background: #21262d;
-            border: 1px solid #30363d;
-            color: #e6edf3;
-            padding: 0.45rem 1.1rem;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #ffffff, #fff3e0);
+            border: 2px solid #ffb347;
+            color: #b45309;
+            padding: 0.45rem 1.2rem;
+            border-radius: 9px;
             font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 700;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 0.4rem;
+            gap: 0.45rem;
             transition: background 0.2s, border-color 0.2s;
             white-space: nowrap;
         }
 
         .toggle-btn:hover {
-            background: #30363d;
-            border-color: #484f58;
+            background: #fff3e0;
+            border-color: #ff8c00;
         }
 
         .toggle-btn.stop {
-            color: #f85149;
-            border-color: #f8514933;
+            color: #dc2626;
+            border-color: #fca5a5;
+            background: #fff5f5;
         }
 
         .toggle-btn.stop:hover {
-            background: #f8514910;
-            border-color: #f8514966;
+            background: #ffe4e4;
+            border-color: #ef4444;
         }
 
         .toggle-btn svg {
@@ -253,52 +244,141 @@
             fill: currentColor;
         }
 
+        /* Refresh counters row */
         .refresh-log {
-            margin-top: 0.5rem;
-            font-size: 0.8rem;
-            color: #8b949e;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 0.2rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
         }
 
         .log-badge {
-            background: #21262d;
-            padding: 0.25rem 0.75rem;
-            border-radius: 16px;
+            background: linear-gradient(135deg, #ffffff, #fff3e0);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
             font-family: 'SF Mono', monospace;
-            font-size: 0.75rem;
-            border: 1px solid #30363d;
-            color: #8b949e;
+            font-size: 0.8rem;
+            border: 2px solid #ffb347;
+            color: #b45309;
             display: flex;
             align-items: center;
-            gap: 0.4rem;
+            gap: 0.5rem;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(255, 165, 0, 0.15);
         }
 
         .log-badge svg {
-            fill: #8b949e;
-            width: 12px;
-            height: 12px;
+            fill: #d97706;
+            width: 13px;
+            height: 13px;
         }
 
+        /* IFRAME VIEWER */
+        .preview-container {
+            background: #ffffff;
+            border: 2px solid #ffb347;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(255, 140, 0, 0.25), 0 0 0 4px rgba(255, 215, 0, 0.15) inset;
+            margin-top: 0.5rem;
+        }
+
+        .preview-header {
+            background: linear-gradient(135deg, #ffb347, #ff8c00);
+            color: white;
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .preview-header .url-display {
+            font-family: 'SF Mono', monospace;
+            font-size: 0.78rem;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 0.2rem 0.7rem;
+            border-radius: 12px;
+            max-width: 70%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .preview-header .live-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.2rem 0.7rem;
+            border-radius: 12px;
+        }
+
+        .preview-header .live-indicator .dot {
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            background: #fff9f0;
+        }
+
+        #previewFrame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: #ffffff;
+        }
+
+        .iframe-overlay-note {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 249, 240, 0.95);
+            border-top: 2px solid #ffb347;
+            padding: 0.5rem 1rem;
+            font-size: 0.72rem;
+            color: #b45309;
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .iframe-overlay-note strong {
+            color: #d97706;
+        }
+
+        /* Helper */
         .helper-note {
             margin-top: 1.2rem;
             font-size: 0.78rem;
-            color: #6e7681;
+            color: #b45309;
             text-align: center;
-            border-top: 1px solid #21262d;
-            padding-top: 1.2rem;
-            line-height: 1.5;
+            border-top: 2px dashed #ffd966;
+            padding-top: 1rem;
+            line-height: 1.6;
         }
 
-        .helper-note a {
-            color: #58a6ff;
-            text-decoration: none;
-        }
-
-        .helper-note a:hover {
-            text-decoration: underline;
+        .helper-note strong {
+            color: #d97706;
         }
 
         .error-shake {
@@ -310,11 +390,18 @@
             25% { transform: translateX(-6px); }
             75% { transform: translateX(6px); }
         }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .card { padding: 1.2rem; }
+            .iframe-wrapper { height: 320px; }
+            .preview-header .url-display { max-width: 100%; }
+        }
     </style>
 </head>
 <body>
     <div class="card">
-        <!-- GitHub branding -->
+        <!-- Header -->
         <div class="github-badge">
             <svg viewBox="0 0 16 16" version="1.1">
                 <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
@@ -333,7 +420,7 @@
             </label>
             <div class="url-input-wrapper" id="inputWrapper">
                 <input type="url" id="urlInput" placeholder="https://github.com/username/repo" value="https://github.com/">
-                <button id="loadBtn" title="Load URL (starts auto-refresh)">
+                <button id="loadBtn" title="Load URL and start auto-refresh">
                     <svg viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 3a5 5 0 100 10A5 5 0 008 3zM2 8a6 6 0 1112 0A6 6 0 012 8z"></path>
                         <path fill-rule="evenodd" d="M8 5.5a.5.5 0 01.5.5v2.5H11a.5.5 0 010 1H8.5V12a.5.5 0 01-1 0V9.5H5a.5.5 0 010-1h2.5V6a.5.5 0 01.5-.5z"></path>
@@ -348,18 +435,18 @@
             <div class="status-left">
                 <div class="pulse-dot idle" id="pulseDot"></div>
                 <div class="status-text" id="statusText">
-                    <strong>Idle</strong> — enter a URL
+                    <strong>Idle</strong> — enter a URL and press Load
                 </div>
             </div>
             <button class="toggle-btn" id="toggleBtn" disabled>
                 <svg viewBox="0 0 16 16" id="toggleIcon">
                     <path d="M6.5 3.5a.5.5 0 01.5-.5h5a.5.5 0 01.5.5v9a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-9zM2 3.5a.5.5 0 01.5-.5H6v9H2.5a.5.5 0 01-.5-.5v-9z"></path>
                 </svg>
-                <span id="toggleText">Stop</span>
+                <span id="toggleText">Start</span>
             </button>
         </div>
 
-        <!-- refresh counter -->
+        <!-- Refresh counters -->
         <div class="refresh-log">
             <div class="log-badge">
                 <svg viewBox="0 0 16 16">
@@ -372,40 +459,61 @@
                 <svg viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0-1.5a5.5 5.5 0 110-11 5.5 5.5 0 010 11zM8 4a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 018 4zm0 7a1 1 0 100-2 1 1 0 000 2z"></path>
                 </svg>
-                <span id="countdownDisplay">1s</span>
+                next in <span id="countdownDisplay">1.0s</span>
             </div>
         </div>
 
-        <!-- tiny note -->
+        <!-- LIVE IFRAME PREVIEW -->
+        <div class="preview-container">
+            <div class="preview-header">
+                <span>🔁 Live preview (auto-refreshed)</span>
+                <span class="url-display" id="urlDisplay">https://github.com/</span>
+                <span class="live-indicator">
+                    <span class="dot"></span> 1s loop
+                </span>
+            </div>
+            <div class="iframe-wrapper">
+                <iframe id="previewFrame" src="https://github.com/" 
+                        sandbox="allow-scripts allow-same-origin allow-forms allow-popups" 
+                        referrerpolicy="no-referrer"></iframe>
+                <div class="iframe-overlay-note">
+                    ⚠️ <strong>Note:</strong> GitHub may block embedding via X-Frame-Options. The counter still refreshes every second.
+                </div>
+            </div>
+        </div>
+
+        <!-- tiny helper -->
         <div class="helper-note">
-            <span>⏱️ Refresh interval: <strong>1 second</strong> · Each refresh resets the timer.</span><br>
-            <span>Works best with public GitHub pages. Some pages may block iframe embedding.</span>
+            <span>⏱️ <strong>Auto‑refresh interval: 1 second</strong> · The iframe above reloads every second.</span><br>
+            <span>If GitHub blocks the iframe, use <strong>“Load”</strong> to try again, or check your browser console for errors.</span>
         </div>
     </div>
 
     <script>
         (function(){
-            // ---------- DOM elements ----------
-            const urlInput = document.getElementById('urlInput');
-            const loadBtn = document.getElementById('loadBtn');
-            const inputWrapper = document.getElementById('inputWrapper');
-            const pulseDot = document.getElementById('pulseDot');
-            const statusText = document.getElementById('statusText');
-            const toggleBtn = document.getElementById('toggleBtn');
-            const toggleText = document.getElementById('toggleText');
-            const toggleIcon = document.getElementById('toggleIcon');
-            const refreshCountSpan = document.getElementById('refreshCount');
-            const countdownDisplay = document.getElementById('countdownDisplay');
+            // ---------- DOM ----------
+            const urlInput        = document.getElementById('urlInput');
+            const loadBtn         = document.getElementById('loadBtn');
+            const inputWrapper    = document.getElementById('inputWrapper');
+            const pulseDot        = document.getElementById('pulseDot');
+            const statusText      = document.getElementById('statusText');
+            const toggleBtn       = document.getElementById('toggleBtn');
+            const toggleText      = document.getElementById('toggleText');
+            const toggleIcon      = document.getElementById('toggleIcon');
+            const refreshCountSpan= document.getElementById('refreshCount');
+            const countdownDisplay= document.getElementById('countdownDisplay');
+            const previewFrame    = document.getElementById('previewFrame');
+            const urlDisplay      = document.getElementById('urlDisplay');
 
             // ---------- State ----------
-            let currentUrl = 'https://github.com/';   // default
-            let isActive = false;          // auto-refresh running?
-            let refreshTimer = null;       // setInterval reference
-            let countdownTimer = null;     // countdown interval (100ms)
+            let currentUrl   = 'https://github.com/';
+            let isActive     = false;
+            let refreshTimer = null;
+            let countdownTimer = null;
             let refreshCount = 0;
-            let remainingMs = 1000;        // countdown tracker
+            let remainingMs  = 1000;
 
-            // ---------- Helper: update status text ----------
+            // ---------- Helpers ----------
             function setStatus(state, message) {
                 if (state === 'active') {
                     pulseDot.classList.remove('idle');
@@ -419,17 +527,13 @@
                 }
             }
 
-            // ---------- Update UI for active/inactive ----------
             function updateUIForActive(active) {
                 if (active) {
                     toggleBtn.disabled = false;
                     toggleBtn.classList.remove('stop');
                     toggleText.innerText = 'Stop';
-                    // change icon to stop square
                     toggleIcon.innerHTML = '<path fill-rule="evenodd" d="M5 3.5h6a1.5 1.5 0 011.5 1.5v6a1.5 1.5 0 01-1.5 1.5H5A1.5 1.5 0 013.5 11V5A1.5 1.5 0 015 3.5zM5 5v6h6V5H5z"></path>';
                 } else {
-                    // when idle or stopped, button shows "Start" if URL exists? 
-                    // We'll keep it enabled if URL exists and not active -> allow restart
                     const url = urlInput.value.trim();
                     if (url) {
                         toggleBtn.disabled = false;
@@ -443,90 +547,45 @@
                 }
             }
 
-            // ---------- Reset countdown display ----------
             function resetCountdownDisplay() {
                 remainingMs = 1000;
-                countdownDisplay.innerText = '1s';
+                countdownDisplay.innerText = '1.0s';
             }
 
-            // ---------- Clear all timers ----------
             function clearAllTimers() {
-                if (refreshTimer) {
-                    clearInterval(refreshTimer);
-                    refreshTimer = null;
-                }
-                if (countdownTimer) {
-                    clearInterval(countdownTimer);
-                    countdownTimer = null;
-                }
+                if (refreshTimer)   { clearInterval(refreshTimer);   refreshTimer = null; }
+                if (countdownTimer) { clearInterval(countdownTimer); countdownTimer = null; }
                 resetCountdownDisplay();
             }
 
-            // ---------- Perform refresh action ----------
+            // ---------- The actual refresh action ----------
             function performRefresh() {
-                if (!isActive) return;   // extra safety
+                if (!isActive) return;
 
                 refreshCount++;
                 refreshCountSpan.innerText = refreshCount;
 
-                // Reload the current URL (the iframe/hidden reload approach)
-                // We use a hidden iframe trick? Actually to "refresh itself" we can just re-assign the URL to an iframe.
-                // But the requirement says: "Url auto reloader auto refresh . Add where i put link and every sec 1 it refresh itself"
-                // Since this is a standalone page, we can simulate by reloading an iframe. But it might be blocked by GitHub's X-Frame-Options.
-                // Instead we can use a more straightforward approach: Open a new window? Not ideal.
-                // But the user asked for "refresh itself" — we can interpret as the page will re-fetch the URL every second using an iframe, but that often fails.
-                // Better: We can navigate to the URL itself? That would leave this page. Not good.
-                // So we'll show a visual counter and open a new tab? Hmm.
-                // Actually, the most sensible "auto refresh" for a webpage is to reload the entire page, but that would reset the counter.
-                // Since the task is to build a "GitHub URL auto refresher" tool — we'll use an iframe to load the URL, and refresh the iframe every second.
-                // We'll create a hidden iframe container inside the card? Or just update an iframe. But GitHub blocks iframes.
-                // Let's be transparent: we'll simulate by fetching? Not possible due to CORS.
-                // So we'll implement a "reload" of the URL by reassigning the src of an iframe (which may not display if blocked).
-                // However, the user likely wants to see the URL refreshing itself — maybe within the page context.
-                // For demonstration, we'll create an iframe overlay? Let's embed an iframe inside the card? That would clutter.
-                // Alternative: We can do a simple reload of the entire page? That would kill the timer.
-                // Let's think: The core idea is to auto-refresh the URL every second. Since we can't easily embed GitHub, we can do:
-                // - Keep a hidden iframe and reload it to simulate refresh. The user doesn't see the content but the count increments.
-                // But that's not satisfying.
-                // Given the constraints, we'll show a small notification that "refresh triggered". Plus we open a new tab? No.
-                // Better: Use window.open with the URL? That would pop up every second — terrible.
-                // I'll implement a hidden iframe reload, and also show an alert-like counter. And mention in the UI that GitHub may block embedding.
-                // For demo purposes, we can also show the URL in an iframe that is visible if possible.
-                // Let's add a small iframe preview area? But card is not designed for that.
-                // Decision: We'll create an iframe (hidden by default) and reload it. It won't be visible, but the refresh mechanism is real.
-                // We also update the counter and show a small timestamp.
-
-                // But we can also show a "last refresh" time in the status? Not needed.
-
-                // We'll create iframe if not exists
-                let iframe = document.getElementById('refreshIframe');
-                if (!iframe) {
-                    iframe = document.createElement('iframe');
-                    iframe.id = 'refreshIframe';
-                    iframe.style.display = 'none';  // hidden: we just want the refresh action
-                    iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin'); // minimal
-                    document.body.appendChild(iframe);
-                }
-                // Reload the URL
+                // Reload the iframe with the current URL
                 try {
-                    iframe.src = currentUrl;
+                    // Using replace to avoid accumulating history
+                    previewFrame.src = currentUrl;
                 } catch (e) {
-                    console.warn('iframe refresh error:', e);
+                    console.warn('iframe reload error:', e);
                 }
 
-                // Reset the countdown display to 1s and restart countdown
-                resetCountdownDisplay();
+                // Reset countdown
+                remainingMs = 1000;
+                countdownDisplay.innerText = '1.0s';
 
-                // Optional: flash the pulse dot
-                pulseDot.style.transform = 'scale(1.3)';
-                setTimeout(() => { pulseDot.style.transform = ''; }, 100);
+                // Visual pulse
+                pulseDot.style.transform = 'scale(1.4)';
+                setTimeout(() => { pulseDot.style.transform = ''; }, 120);
             }
 
-            // ---------- Start auto-refresh ----------
+            // ---------- Start ----------
             function startAutoRefresh() {
                 if (isActive) return;
 
-                // Ensure URL is set
                 const url = urlInput.value.trim();
                 if (!url) {
                     urlInput.focus();
@@ -536,95 +595,47 @@
                 }
 
                 currentUrl = url;
+                urlDisplay.innerText = currentUrl;
+                // Ensure iframe is showing the URL
+                previewFrame.src = currentUrl;
+
                 isActive = true;
                 refreshCount = 0;
                 refreshCountSpan.innerText = '0';
 
-                // Clear any existing timers
                 clearAllTimers();
-
-                // Update status
                 setStatus('active', `refreshing ${url}`);
                 updateUIForActive(true);
-                toggleBtn.disabled = false;
 
-                // Perform first refresh immediately? Or wait 1 sec? 
-                // According to spec "every sec 1 it refresh itself" — we'll wait 1 sec before first refresh.
-                // But we want to start countdown from 1s.
                 resetCountdownDisplay();
+                remainingMs = 1000;
 
-                // Countdown update every 100ms for smooth display
+                // Countdown display updates
                 countdownTimer = setInterval(() => {
                     if (!isActive) return;
                     remainingMs -= 100;
                     if (remainingMs < 0) remainingMs = 0;
-                    const secondsLeft = Math.max(0, remainingMs / 1000);
-                    countdownDisplay.innerText = secondsLeft.toFixed(1) + 's';
+                    countdownDisplay.innerText = (remainingMs / 1000).toFixed(1) + 's';
                 }, 100);
 
-                // Refresh timer every 1000ms
+                // Actual refresh every second
                 refreshTimer = setInterval(() => {
                     if (!isActive) return;
                     performRefresh();
                 }, 1000);
-
-                // Also we want to visually update countdown reset after each refresh: performRefresh resets remainingMs
-                // But the countdown interval will overwrite display. We'll set remainingMs = 1000 inside performRefresh.
-
-                // Override performRefresh to reset remainingMs? We'll adjust inside performRefresh.
-                // Actually we need to reset remainingMs to 1000 inside performRefresh.
-                // Let's modify performRefresh to reset remainingMs.
-                const originalPerformRefresh = performRefresh;
-                performRefresh = function() {
-                    if (!isActive) return;
-                    refreshCount++;
-                    refreshCountSpan.innerText = refreshCount;
-                    // reload iframe
-                    let iframe = document.getElementById('refreshIframe');
-                    if (!iframe) {
-                        iframe = document.createElement('iframe');
-                        iframe.id = 'refreshIframe';
-                        iframe.style.display = 'none';
-                        document.body.appendChild(iframe);
-                    }
-                    try {
-                        iframe.src = currentUrl;
-                    } catch (e) {}
-                    // Reset countdown
-                    remainingMs = 1000;
-                    countdownDisplay.innerText = '1.0s';
-                    // visual feedback
-                    pulseDot.style.transform = 'scale(1.3)';
-                    setTimeout(() => { pulseDot.style.transform = ''; }, 100);
-                };
-
-                // Reassign the timer to use new performRefresh
-                if (refreshTimer) clearInterval(refreshTimer);
-                refreshTimer = setInterval(() => {
-                    if (!isActive) return;
-                    performRefresh();
-                }, 1000);
-
-                // Make sure performRefresh also increments counter etc already inside.
-                // But we've overridden it. We'll keep the new one.
-                // But we also need to increment refreshCount and display. It's inside new performRefresh.
-                // Also need to reset remainingMs inside new performRefresh.
-                // Already done.
             }
 
-            // ---------- Stop auto-refresh ----------
+            // ---------- Stop ----------
             function stopAutoRefresh() {
                 if (!isActive) return;
                 isActive = false;
                 clearAllTimers();
                 setStatus('idle', 'auto-refresh stopped');
                 updateUIForActive(false);
-                // keep countdown display as is, but reset to '1s' maybe
-                countdownDisplay.innerText = '1s';
-                // remove iframe? keep for later
+                countdownDisplay.innerText = '1.0s';
             }
 
-            // ---------- Load button handler ----------
+            // ---------- Load button ----------
             function onLoad() {
                 const url = urlInput.value.trim();
                 if (!url) {
@@ -632,37 +643,30 @@
                     setTimeout(() => inputWrapper.classList.remove('error-shake'), 300);
                     return;
                 }
-                // If active, stop current
-                if (isActive) {
-                    stopAutoRefresh();
-                }
+                if (isActive) stopAutoRefresh();
+
                 currentUrl = url;
-                // Update status
+                urlDisplay.innerText = currentUrl;
                 setStatus('idle', `loaded: ${url}`);
-                // Enable toggle button
                 toggleBtn.disabled = false;
                 toggleText.innerText = 'Start';
                 toggleIcon.innerHTML = '<path fill-rule="evenodd" d="M4 3.5a.5.5 0 01.77-.42l7.5 4.5a.5.5 0 010 .84l-7.5 4.5A.5.5 0 014 12.5v-9z"></path>';
-                // Reset count display
                 refreshCount = 0;
                 refreshCountSpan.innerText = '0';
-                countdownDisplay.innerText = '1s';
-                // We do NOT start automatically. The user must click Start.
-                // But the spec: "every sec 1 it refresh itself" — maybe they expect auto-start on load?
-                // But they also said "Add where i put link and every sec 1 it refresh itself" — probably means when I put link, it starts refreshing.
-                // To be safe, we also have a Start button. But we can auto-start on Load click? Hmm.
-                // Let's make Load also start the auto-refresh immediately (so it's one-click).
-                // But then Stop button will be there to stop.
-                // We'll start automatically after loading.
+                countdownDisplay.innerText = '1.0s';
+
+                // Show the URL in the iframe
+                previewFrame.src = currentUrl;
+
+                // Auto-start after loading
                 startAutoRefresh();
             }
 
-            // ---------- Toggle button (start/stop) ----------
+            // ---------- Toggle button ----------
             function onToggle() {
                 if (isActive) {
                     stopAutoRefresh();
                 } else {
-                    // start
                     const url = urlInput.value.trim();
                     if (!url) {
                         inputWrapper.classList.add('error-shake');
@@ -670,15 +674,16 @@
                         return;
                     }
                     currentUrl = url;
+                    urlDisplay.innerText = currentUrl;
+                    previewFrame.src = currentUrl;
                     startAutoRefresh();
                 }
             }
 
-            // ---------- Event listeners ----------
+            // ---------- Listeners ----------
             loadBtn.addEventListener('click', onLoad);
             toggleBtn.addEventListener('click', onToggle);
 
-            // Allow pressing Enter in the input to trigger load
             urlInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
                     e.preventDefault();
@@ -686,7 +691,6 @@
                 }
             });
 
-            // When user types, we enable/disable toggle button based on content (if not active)
             urlInput.addEventListener('input', () => {
                 if (!isActive) {
                     const hasText = urlInput.value.trim().length > 0;
@@ -700,164 +704,24 @@
                 }
             });
 
-            // ---------- Initialise on page load ----------
+            // ---------- Init ----------
             (function init() {
-                // set default URL in input
                 urlInput.value = 'https://github.com/';
                 currentUrl = 'https://github.com/';
+                urlDisplay.innerText = currentUrl;
+                previewFrame.src = currentUrl;
+
                 setStatus('idle', 'ready — press Load or Start');
                 toggleBtn.disabled = false;
                 toggleText.innerText = 'Start';
                 toggleIcon.innerHTML = '<path fill-rule="evenodd" d="M4 3.5a.5.5 0 01.77-.42l7.5 4.5a.5.5 0 010 .84l-7.5 4.5A.5.5 0 014 12.5v-9z"></path>';
                 refreshCountSpan.innerText = '0';
-                countdownDisplay.innerText = '1s';
-                // Ensure no active timers
-                clearAllTimers();
-            })();
-
-            // patch: ensure performRefresh resets remainingMs and countdown display
-            // We'll redefine performRefresh to be safe.
-            const originalPerformRefreshGlobal = performRefresh;
-            performRefresh = function() {
-                if (!isActive) return;
-                refreshCount++;
-                refreshCountSpan.innerText = refreshCount;
-                // reload iframe
-                let iframe = document.getElementById('refreshIframe');
-                if (!iframe) {
-                    iframe = document.createElement('iframe');
-                    iframe.id = 'refreshIframe';
-                    iframe.style.display = 'none';
-                    document.body.appendChild(iframe);
-                }
-                try {
-                    iframe.src = currentUrl;
-                } catch (e) {}
-                // Reset countdown
-                remainingMs = 1000;
                 countdownDisplay.innerText = '1.0s';
-                // visual pulse
-                pulseDot.style.transform = 'scale(1.3)';
-                setTimeout(() => { pulseDot.style.transform = ''; }, 100);
-            };
-
-            // Rebind startAutoRefresh and timers to use the new performRefresh
-            // We'll override startAutoRefresh
-            const originalStart = startAutoRefresh;
-            startAutoRefresh = function() {
-                if (isActive) return;
-                const url = urlInput.value.trim();
-                if (!url) return;
-
-                currentUrl = url;
-                isActive = true;
-                refreshCount = 0;
-                refreshCountSpan.innerText = '0';
                 clearAllTimers();
-
-                setStatus('active', `refreshing ${url}`);
-                updateUIForActive(true);
-                toggleBtn.disabled = false;
-
-                resetCountdownDisplay();
-                remainingMs = 1000;
-
-                // countdown timer
-                countdownTimer = setInterval(() => {
-                    if (!isActive) return;
-                    remainingMs -= 100;
-                    if (remainingMs < 0) remainingMs = 0;
-                    const secondsLeft = Math.max(0, remainingMs / 1000);
-                    countdownDisplay.innerText = secondsLeft.toFixed(1) + 's';
-                }, 100);
-
-                // refresh timer
-                refreshTimer = setInterval(() => {
-                    if (!isActive) return;
-                    performRefresh();
-                }, 1000);
-            };
-
-            // override stopAutoRefresh to use new clear
-            const originalStop = stopAutoRefresh;
-            stopAutoRefresh = function() {
-                if (!isActive) return;
-                isActive = false;
-                clearAllTimers();
-                setStatus('idle', 'auto-refresh stopped');
-                updateUIForActive(false);
-                countdownDisplay.innerText = '1s';
-            };
-
-            // Rebind functions to global scope
-            window.startAutoRefresh = startAutoRefresh;
-            window.stopAutoRefresh = stopAutoRefresh;
-            window.performRefresh = performRefresh;
-
-            // Re-assign event handlers to use the new functions
-            loadBtn.onclick = function() {
-                const url = urlInput.value.trim();
-                if (!url) {
-                    inputWrapper.classList.add('error-shake');
-                    setTimeout(() => inputWrapper.classList.remove('error-shake'), 300);
-                    return;
-                }
-                if (isActive) stopAutoRefresh();
-                currentUrl = url;
-                setStatus('idle', `loaded: ${url}`);
-                toggleBtn.disabled = false;
-                toggleText.innerText = 'Start';
-                toggleIcon.innerHTML = '<path fill-rule="evenodd" d="M4 3.5a.5.5 0 01.77-.42l7.5 4.5a.5.5 0 010 .84l-7.5 4.5A.5.5 0 014 12.5v-9z"></path>';
-                refreshCount = 0;
-                refreshCountSpan.innerText = '0';
-                countdownDisplay.innerText = '1s';
-                startAutoRefresh();  // auto-start after load
-            };
-
-            toggleBtn.onclick = function() {
-                if (isActive) {
-                    stopAutoRefresh();
-                } else {
-                    const url = urlInput.value.trim();
-                    if (!url) {
-                        inputWrapper.classList.add('error-shake');
-                        setTimeout(() => inputWrapper.classList.remove('error-shake'), 300);
-                        return;
-                    }
-                    currentUrl = url;
-                    startAutoRefresh();
-                }
-            };
-
-            // Input listener redefined
-            urlInput.addEventListener('input', function() {
-                if (!isActive) {
-                    const hasText = urlInput.value.trim().length > 0;
-                    toggleBtn.disabled = !hasText;
-                    if (hasText) {
-                        toggleText.innerText = 'Start';
-                        toggleIcon.innerHTML = '<path fill-rule="evenodd" d="M4 3.5a.5.5 0 01.77-.42l7.5 4.5a.5.5 0 010 .84l-7.5 4.5A.5.5 0 014 12.5v-9z"></path>';
-                    } else {
-                        toggleBtn.disabled = true;
-                    }
-                }
-            });
-
-            // final init
-            (function finalInit() {
-                urlInput.value = 'https://github.com/';
-                currentUrl = 'https://github.com/';
-                setStatus('idle', 'ready — press Load or Start');
-                toggleBtn.disabled = false;
-                toggleText.innerText = 'Start';
-                toggleIcon.innerHTML = '<path fill-rule="evenodd" d="M4 3.5a.5.5 0 01.77-.42l7.5 4.5a.5.5 0 010 .84l-7.5 4.5A.5.5 0 014 12.5v-9z"></path>';
-                refreshCountSpan.innerText = '0';
-                countdownDisplay.innerText = '1s';
-                clearAllTimers();
-                // remove any existing iframe
-                const oldIframe = document.getElementById('refreshIframe');
-                if (oldIframe) oldIframe.remove();
             })();
+
+            // Expose for debugging
+            window.__autoRefresher = { startAutoRefresh, stopAutoRefresh, performRefresh };
         })();
     </script>
 </body>
